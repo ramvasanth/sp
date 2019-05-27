@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./dockers/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sp
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+    container_name: golang_db
+    ports:
+      - "3306:3306"
+    tty: true
+  app:
+    build:
+      context: .
+    environment:
+      MYSQL_URL: docker:docker@(db:3306)/sp?parseTime=true&multiStatements=true&charset=utf8mb4
+    container_name: golang_app
+    command: ./script/start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
