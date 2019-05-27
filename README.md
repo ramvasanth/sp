@@ -6,6 +6,9 @@ This worker provides all the API for SP
 for more info, read the docs below
 https://github.com/ramvasanth/sp/blob/master/docs.MD
 
+## Docker Setup
+to run the service from docker
+```docker-compose up --build```
 ## Development
 install Go language compiler and mysql server using brew or linux installer such as apt-get or yum
 #### for windows
