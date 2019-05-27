@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Usage: script/start
+#
+
+
+set -e
+
+# use -v to see all logs
+./script/build
+go test ./...
