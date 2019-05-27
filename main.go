@@ -14,7 +14,6 @@ import (
 func main() {
 	loadDeps()
 	log.Println("dependecies are loaded")
-	gin.SetMode(gin.ReleaseMode)
 	g := gin.New()
 	g.Use(gin.Recovery())
 	controllers.LoadRoutes(g)
