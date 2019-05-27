@@ -30,7 +30,6 @@ make a POST request to this URL http://localhost:3000/relation/common with the f
 ``
 
 #to subscribe to updates from an email address
-
 make a POST request to this URL http://localhost:3000/subscription/create with the following payload and set the Content-Type to application/json in the header 
 ``
 {
